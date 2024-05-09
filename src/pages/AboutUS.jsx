@@ -4,6 +4,9 @@ import tere from "../assets/tere.jpg";
 
 export default function AboutUS(){
     return(
+            <h1>About Us</h1>
+
+        </>
 
     );
 }

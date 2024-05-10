@@ -7,16 +7,16 @@ import denzel from "../assets/denzel1.jpg";
 export default function AboutUs() {
   return (
     <>
-      <h1 class="text-5xl mt-10 text-center font-semibold text-yellow-800 font-serif">
+      <h1 class="text-5xl mt-10 text-center font-semibold text-myColor-500 font-serif">
         Hihiheha
         <br />
       </h1>
-        <h1 class="text-5xl mt-2 mb-10 text-center text-yellow-400 font-serif">
+        <h1 class="text-5xl mt-2 mb-10 text-center text-myColor-200 font-serif">
           Meet Our Team!
         </h1>
 
       <div class="flex justify-around flex-wrap px-14">
-        <div class="w-52 mx-auto overflow-hidden bg-white rounded-lg shadow-lg hover:shadow-yellow-600 mb-5">
+        <div class="w-52 mx-auto overflow-hidden bg-white rounded-lg shadow-lg hover:shadow-myColor-500 mb-5">
           <div class="relative">
             <img class="w-full h-48 object-cover" src={bintang} />
           </div>

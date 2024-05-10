@@ -7,13 +7,13 @@ import denzel from "../assets/denzel1.jpg";
 export default function AboutUs() {
   return (
     <>
-      <h1 class="text-5xl mt-10 mb-10 text-center text-yellow-800 font-extrabold">
-        Hihihaha
+      <h1 class="text-5xl mt-10 text-center font-semibold text-yellow-800 font-serif">
+        Hihiheha
         <br />
-        <small class="ms-2 font-semibold text-yellow-400 ">
-          Meet Our Team!
-        </small>
       </h1>
+        <h1 class="text-5xl mt-2 mb-10 text-center text-yellow-400 font-serif">
+          Meet Our Team!
+        </h1>
 
       <div class="flex justify-around flex-wrap px-14">
         <div class="w-52 mx-auto overflow-hidden bg-white rounded-lg shadow-lg hover:shadow-yellow-600 mb-5">
@@ -161,6 +161,13 @@ export default function AboutUs() {
           </div>
         </div>
       </div>
+
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
     </>
   );
 }

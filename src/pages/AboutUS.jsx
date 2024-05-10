@@ -4,12 +4,12 @@ import tere from "../assets/tere.jpg";
 import bintang from "../assets/Bintang2.jpg";
 import denzel from "../assets/denzel1.jpg";
 
-export default function AboutUS() {
+export default function AboutUs() {
   return (
     <>
       <h1 class="text-5xl mt-10 mb-10 text-center text-yellow-800 font-extrabold">
         Hihihaha
-        <br/>
+        <br />
         <small class="ms-2 font-semibold text-yellow-400 ">
           Meet Our Team!
         </small>
@@ -33,7 +33,10 @@ export default function AboutUS() {
             </span>
           </div>
           <div class="px-6 py-4">
-            <a href="https://www.instagram.com/dikarabintang/" class="text-yellow-600 hover:underline">
+            <a
+              href="https://www.instagram.com/dikarabintang/"
+              class="text-yellow-600 hover:underline"
+            >
               @dikarabintang
             </a>
           </div>
@@ -59,7 +62,10 @@ export default function AboutUS() {
             </span>
           </div>
           <div class="px-6 py-4 pb-3">
-            <a href="https://www.instagram.com/denzellumenon/" class="text-yellow-600 hover:underline">
+            <a
+              href="https://www.instagram.com/denzellumenon/"
+              class="text-yellow-600 hover:underline"
+            >
               @denzellumenon
             </a>
           </div>
@@ -85,7 +91,10 @@ export default function AboutUS() {
             </span>
           </div>
           <div class="px-6 py-4 ">
-            <a href="https://www.instagram.com/descellia/" class="text-yellow-600 hover:underline">
+            <a
+              href="https://www.instagram.com/descellia/"
+              class="text-yellow-600 hover:underline"
+            >
               @descellia
             </a>
           </div>
@@ -112,7 +121,10 @@ export default function AboutUS() {
             </span>
           </div>
           <div class="px-6 py-4 ">
-            <a href="https://www.instagram.com/abigailtheresiaaa/" class="text-yellow-600 hover:underline">
+            <a
+              href="https://www.instagram.com/abigailtheresiaaa/"
+              class="text-yellow-600 hover:underline"
+            >
               @abigailtheresiaaa
             </a>
           </div>
@@ -140,7 +152,10 @@ export default function AboutUS() {
             </span>
           </div>
           <div class="px-6 py-4 ">
-            <a href="https://www.instagram.com/shrron__/" class="text-yellow-600 hover:underline">
+            <a
+              href="https://www.instagram.com/shrron__/"
+              class="text-yellow-600 hover:underline"
+            >
               @shrron__
             </a>
           </div>

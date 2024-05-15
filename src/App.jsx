@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import ExplorePage from "./pages/ExplorePage";
 import TripPlanner from "./pages/TripPlanner";
 import MapPage from "./pages/MapPage";
-import AboutUs from "./pages/AboutUs";
+import AboutUs from "./pages/Credit";
 import Background from "./assets/bg2.jpg";
 
 export default function App() {

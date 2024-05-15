@@ -117,7 +117,7 @@ export default function AboutUs() {
           </div>
           <div class="px-6 py-4 ">
             <span class="inline-block px-2 py-1 font-semibold text-zinc-50 bg-amber-800 rounded-full">
-              Tolol
+              Video
             </span>
           </div>
           <div class="px-6 py-4 ">

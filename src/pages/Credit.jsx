@@ -161,8 +161,6 @@ export default function AboutUs() {
           </div>
         </div>
       </div>
-      <br/>
-      <br/>
     </div>
   );
 }

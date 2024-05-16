@@ -7,8 +7,6 @@ export default function TripPlanner() {
         <div class="absolute bottom-80 left-14 font-serif text-l text-white  w-1/3 ">
           <p class="text-s">Use these tools to help you on your journey.</p>
         </div>
-      <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-
     </>
   );
 }

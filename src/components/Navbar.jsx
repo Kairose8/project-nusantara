@@ -14,7 +14,7 @@ export default function Navbar() {
       <nav className=" border-gray-200">
         <div className=" flex flex-wrap items-center justify-between mx-auto p-4">
           <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-            <img  src={iconAirplane} className="h-10" alt="Icon Pesawat" />
+            <img  src={iconAirplane} className="h-10 lg:h-16" alt="Icon Pesawat" />
             <span className="block sm:hidden text-center text-l font-semibold whitespace-nowrap text-white ">
               The Amazing Yogyakarta
             </span>

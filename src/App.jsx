@@ -6,17 +6,11 @@ import ExplorePage from "./pages/ExplorePage";
 import TripPlanner from "./pages/TripPlanner";
 import MapPage from "./pages/MapPage";
 import AboutUs from "./pages/Credit";
-import Background from "./assets/bg2.jpg";
+import Weather from "./pages/Weather";
 
 export default function App() {
   return (
-    <div
-      style={{
-        backgroundImage: `url(${Background})`,
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-      }}
-    >
+    <div className="bg-gradient-to-r from-stone-500 to-stone-700" >
       <Router>
         <Navbar />
         <Routes>
@@ -25,6 +19,7 @@ export default function App() {
           <Route path="/TripPlanner" element={<TripPlanner />} />
           <Route path="/MapPage" element={<MapPage />} />
           <Route path="/AboutUs" element={<AboutUs />} />
+          <Route path="/Weather" element={<Weather />} />
         </Routes>
       </Router>
     </div>

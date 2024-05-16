@@ -1,12 +1,12 @@
 import desi from "../assets/desi.jpg";
 import sharon from "../assets/sharon.jpg";
 import tere from "../assets/tere.jpg";
-import bintang from "../assets/Bintang2.jpg";
+import bintang from "../assets/Bintang.jpg";
 import denzel from "../assets/denzel1.jpg";
 
 export default function AboutUs() {
   return (
-    <>
+    <div className="overflow-hidden">
       <h1 class="text-5xl mt-10 text-center font-semibold text-myColor-500 font-serif">
         Hihiheha
         <br />
@@ -161,13 +161,8 @@ export default function AboutUs() {
           </div>
         </div>
       </div>
-
       <br/>
       <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-    </>
+    </div>
   );
 }

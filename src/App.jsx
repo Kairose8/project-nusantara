@@ -6,11 +6,12 @@ import ExplorePage from "./pages/ExplorePage";
 import TripPlanner from "./pages/TripPlanner";
 import MapPage from "./pages/MapPage";
 import AboutUs from "./pages/Credit";
-import Background from "./assets/bg2.jpg";
+import Weather from "./pages/Weather";
+import Background from "./assets/bgBatik.jpg";
 
 export default function App() {
   return (
-    <div
+    <div 
       style={{
         backgroundImage: `url(${Background})`,
         backgroundRepeat: "no-repeat",
@@ -25,6 +26,7 @@ export default function App() {
           <Route path="/TripPlanner" element={<TripPlanner />} />
           <Route path="/MapPage" element={<MapPage />} />
           <Route path="/AboutUs" element={<AboutUs />} />
+          <Route path="/Weather" element={<Weather />} />
         </Routes>
       </Router>
     </div>

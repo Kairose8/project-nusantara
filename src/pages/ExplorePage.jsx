@@ -1,6 +1,6 @@
 export default function ExplorePage() {
   return (
-    <div class="flex justify-around flex-wrap px-14">
+    <div class="flex justify-around flex-wrap px-14 h-screen">
       <div>
         <div class="absolute top-96 left-14 font-serif text-xl text-white  w-1/3">
           <p>Only in</p>
@@ -11,11 +11,6 @@ export default function ExplorePage() {
             Yogyakarta
           </p>
         </div>
-      <br/><br/><br/><br/><br/><br/>
-      <br/><br/><br/><br/><br/><br/>
-      <br/><br/><br/><br/><br/><br/>
-      <br/><br/><br/><br/><br/><br/>
-      <br/><br/><br/><br/><br/><br/>
       </div>
     </div>
   );

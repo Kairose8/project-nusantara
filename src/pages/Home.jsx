@@ -5,7 +5,7 @@ export default function Home() {
 
 
   return (
-    <div>
+    <div className="h-screen">
       <p class="font-serif text-5xl mb-5 mt-52 text-white ml-12 w-1/3">
         The Amazing Yogyakarta
       </p>

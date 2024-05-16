@@ -7,17 +7,10 @@ import TripPlanner from "./pages/TripPlanner";
 import MapPage from "./pages/MapPage";
 import AboutUs from "./pages/Credit";
 import Weather from "./pages/Weather";
-import Background from "./assets/bgBatik.jpg";
 
 export default function App() {
   return (
-    <div 
-      style={{
-        backgroundImage: `url(${Background})`,
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-      }}
-    >
+    <div className="bg-gradient-to-r from-stone-500 to-stone-700" >
       <Router>
         <Navbar />
         <Routes>

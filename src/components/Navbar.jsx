@@ -1,6 +1,10 @@
 import iconAirplane from "../assets/iconAirplane.png";
 import { useNavigate } from "react-router-dom";
+// import React, { useState, useEffect } from 'react';
 
+// const handleKeyPress = (event) =>{
+//   if (event.key === "click")
+// }
 
 export default function Navbar() {
   const navigate = useNavigate();
@@ -11,9 +15,9 @@ export default function Navbar() {
         <div className=" flex flex-wrap items-center justify-between mx-auto p-4">
           <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
             <img  src={iconAirplane} className="h-10" alt="Icon Pesawat" />
-            {/* <span className="self-center text-l font-semibold whitespace-nowrap dark:text-white">
-              Amazing Yogyakarta
-            </span> */}
+            <span className="block sm:hidden text-center text-l font-semibold whitespace-nowrap text-white ">
+              The Amazing Yogyakarta
+            </span>
           </a>
           <div className="flex items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse">
             <button
@@ -45,7 +49,7 @@ export default function Navbar() {
             className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
             id="navbar-language"
           >
-            <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+            <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 lg:text-xl">
               <li>
                 <button onClick={() => navigate('/') }
                   className="block py-2 px-3 md:p-0 text-white rounded bg-transparent hover:text-yellow-600"

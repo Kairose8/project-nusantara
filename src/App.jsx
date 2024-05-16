@@ -10,7 +10,7 @@ import Weather from "./pages/Weather";
 
 export default function App() {
   return (
-    <div className="bg-gradient-to-r from-stone-500 to-stone-700 h-screen " >
+    <div className="bg-gradient-to-r from-stone-500 to-stone-700  " >
       <Router>
         <Navbar />
         <Routes>

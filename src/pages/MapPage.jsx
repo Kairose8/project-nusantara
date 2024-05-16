@@ -46,7 +46,7 @@ export default function MapPage() {
     }
   ];
   return (
-    <>
+    <div className="h-full lg:h-screen">
       <MapContainer center={[-7.796111, 110.366389]} zoom={12}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -72,6 +72,6 @@ export default function MapPage() {
       <br />
       <br />
       <br />
-    </>
+    </div>
   );
 }

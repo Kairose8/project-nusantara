@@ -1,32 +1,30 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState } from "react";
 
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
 
+import "../css/swiper.css";
 
-import '../css/swiper.css';
-
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
-
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
 
 import { EffectCoverflow, Pagination } from "swiper/modules";
 
 export default function ExplorePage() {
   return (
-    <div class="flex justify-around flex-wrap px-14 h-screen">
-      <div>
-        <div class="absolute top-96 left-14 font-serif text-xl text-white  w-1/3">
-          <p>Only in</p>
+    
+      <div class="flex justify-around flex-wrap px-14 h-screen md:mt-40">
+        <div>
+          <div class="mt-11 font-serif text-xl text-white  w-1/3">
+            <p>Only in</p>
+          </div>
+          <div class="font-serif text-5xl font-bold text-white  w-1/3 ">
+            <p>
+              Yogyakarta
+            </p>
+          </div>
         </div>
-        <div class="absolute top-96 left-14 font-serif text-5xl font-bold text-white  w-1/3 ">
-          <p class="text-s">
-            <br />
-            Yogyakarta
-          </p>
-
-        </div>
-      </div>
+        <div className=" -mt-36 md:mt-0 size-max">
           <Swiper
             effect={"coverflow"}
             grabCursor={true}
@@ -41,7 +39,7 @@ export default function ExplorePage() {
             }}
             pagination={true}
             modules={[EffectCoverflow, Pagination]}
-            className="mySwiper"
+            className="mySwiper rounded-2xl sm:size-44 md:size-80 lg:96 "
           >
             <SwiperSlide>
               <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
@@ -71,6 +69,8 @@ export default function ExplorePage() {
               <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
             </SwiperSlide>
           </Swiper>
-    </div>
+        </div>
+      </div>
+    
   );
 }

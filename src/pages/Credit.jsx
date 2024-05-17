@@ -1,12 +1,12 @@
-import desi from "../assets/desi.jpg";
-import sharon from "../assets/sharon.jpg";
-import tere from "../assets/tere.jpg";
-import bintang from "../assets/Bintang.jpg";
-import denzel from "../assets/denzel1.jpg";
+import desi from "../assets/portrait/desi.jpg";
+import sharon from "../assets/portrait/sharon.jpg";
+import tere from "../assets/portrait/tere.jpg";
+import bintang from "../assets/portrait/Bintang.jpg";
+import denzel from "../assets/portrait/denzel1.jpg";
 
 export default function AboutUs() {
   return (
-    <div className="overflow-hidden">
+    <div className="h-full lg:h-screen">
       <h1 class="text-5xl mt-10 text-center font-semibold text-myColor-500 font-serif">
         Hihiheha
         <br />
@@ -161,8 +161,6 @@ export default function AboutUs() {
           </div>
         </div>
       </div>
-      <br/>
-      <br/>
     </div>
   );
 }

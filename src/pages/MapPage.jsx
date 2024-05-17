@@ -2,8 +2,8 @@ import Map from "../components/Map";
 
 export default function MapPage() {
   return (
-    <>
-      <Map/>
+
+    <div className="h-full lg:h-screen">
       <br />
       <p class="font-serif text-5xl mb-5 mt-52 text-white ml-12 w-1/3">
         Adventure Map
@@ -16,6 +16,6 @@ export default function MapPage() {
       <br />
       <br />
       <br />
-    </>
+    </div>
   );
 }

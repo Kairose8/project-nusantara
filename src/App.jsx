@@ -9,7 +9,7 @@ import AboutUs from "./pages/Credit";
 import Weather from "./pages/Weather";
 import Destinations from "./pages/Destinations";
 import Language from "./pages/Language";
-// import Currency from "./pages/currency";
+import Currency from "./pages/Currency";
 
 
 
@@ -26,7 +26,7 @@ export default function App() {
           <Route path="/AboutUs" element={<AboutUs />} />
           <Route path="/Weather" element={<Weather />} />
           <Route path="/Language" element={<Language />} />
-          {/* <Route path="/Currency" element={<Currency />} /> */}
+          <Route path="/Currency" element={<Currency />} />
           <Route path="/Destinations/:place" element={<Destinations/>} />
         </Routes>
       </Router>

@@ -1,9 +1,14 @@
 // @type {import('tailwindcss').Config}
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        space: ['"Space Grotesk"', ...defaultTheme.fontFamily.sans],
+        play: ['"Playfair Display"', ...defaultTheme.fontFamily.sans],
+      },
       colors: {
         myColor: {
           50: "#f5f3f1",

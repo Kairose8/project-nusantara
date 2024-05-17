@@ -23,25 +23,20 @@ export default function weather() {
 
   console.log(forecastData)
   return (
-    <div >
+    <div className="h-screen" >
        {forecastData && (
-        <div className=' text-center items-center mt-5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -mt-10 sm:mt-0'>
-          <h2 className='text-3xl md:text-5xl mb-10'>{forecastData.city.name}</h2>
+        <div className=' text-center items-center mt-5 absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 -mt-10 sm:mt-0'>
+          <h2 className='text-3xl md:text-5xl mb-10 text-stone-300'>{forecastData.city.name}</h2>
           <div key={forecastData.list[0].dt}>
-            {/* <img
-              src={`http://openweathermap.org/img/wn/${forecastData.list[0].weather[0].icon}.png`}
-              alt="Weather Icon"
-              className='mx-auto w-64'
-            /> */}
-            <p className='text-2xl md:text-6xl mb-10 font-bold'>{forecastData.list[0].main.temp} °C</p>
-            <p className='text-xl sm:text-xl md:text-3xl mb-5'>{forecastData.list[0].weather[0].description}</p>
-            <p className='text-2xl md:text-5xl mb-10'>Humidity: {forecastData.list[0].main.humidity}%</p>
+            <p className='text-2xl md:text-6xl mb-10 text-stone-300 font-bold'>{forecastData.list[0].main.temp} °C</p>
+            <p className='text-xl sm:text-xl md:text-3xl text-stone-300 mb-5'>{forecastData.list[0].weather[0].description}</p>
+            <p className='text-2xl md:text-5xl mb-10 text-stone-300'>Humidity: {forecastData.list[0].main.humidity}%</p>
           </div>
         </div>
       )}
       {/* Weather Forecast */}
       {forecastData ? (
-        <div className='flex sm:justify-center text-center overflow-x-auto whitespace-nowrap bg-slate-50 bg-opacity-50 backdrop-filter backdrop-blur-lg w-2/3 md:w-2/3 mx-auto rounded-full md:pl-20 pr-10 absolute bottom-40 sm:bottom-8 left-1/2 -translate-x-1/2'>
+        <div className='flex sm:justify-center text-center overflow-x-auto whitespace-nowrap bg-slate-50 bg-opacity-50 backdrop-filter backdrop-blur-lg w-2/3 md:w-2/3 mx-auto rounded md:pl-20 pr-10 absolute top-2/3 sm:bottom-8 left-1/2 -translate-x-1/2'>
           {forecastData.list
             .filter((forecast, index) => index < 7)
             .map((forecast, index) => (

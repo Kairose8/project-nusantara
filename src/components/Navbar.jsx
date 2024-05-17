@@ -1,4 +1,4 @@
-import iconAirplane from "../assets/iconAirplane.png";
+import iconAirplane from "../assets/icons/iconAirplane.png";
 import { useNavigate } from "react-router-dom";
 import React, { useState } from 'react';
 
@@ -20,7 +20,7 @@ export default function Navbar() {
         </a>
 
         {/* tulisan judul sm */}
-          <span className="block sm:hidden text-center text-l font-semibold whitespace-nowrap text-white ">
+          <span className="block md:hidden text-center text-l font-semibold whitespace-nowrap text-white ">
             The Amazing Yogyakarta
           </span>
         <div className="flex items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse">

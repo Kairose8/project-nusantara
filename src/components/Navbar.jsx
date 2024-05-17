@@ -96,39 +96,39 @@ export default function Navbar() {
         {/* navbar sm */}
         {isOpen && (
           <div className="fixed top-0 left-0 z-50 w-full h-full bg-black bg-opacity-50 flex justify-center items-center">
-            <div className="bg-white rounded-lg p-8">
-              <ul className="flex flex-col font-medium space-y-4">
+            <div className="bg-myColor-600 rounded-lg p-8">
+              <ul className="flex flex-col items-center font-medium space-y-4">
                 <li>
                   <button onClick={() => {navigate('/'); toggleMenu();}}
-                    className="block py-2 px-3 text-black rounded bg-transparent hover:text-yellow-600"
+                    className="block text py-2 px-3 text-stone-300 rounded bg-transparent hover:text-yellow-600"
                   >
                     Home
                   </button>
                 </li>
                 <li>
                   <button onClick={() => {navigate('/ExplorePage'); toggleMenu();}}
-                    className="block py-2 px-3 text-black rounded bg-transparent hover:text-yellow-600"
+                    className="block py-2 px-3 text-stone-300 rounded bg-transparent hover:text-yellow-600"
                   >
                     Go Explore
                   </button>
                 </li>
                 <li>
                   <button onClick={() => {navigate('/TripPlanner'); toggleMenu();}}
-                    className="block py-2 px-3 text-black rounded bg-transparent hover:text-yellow-600"
+                    className="block py-2 px-3 text-stone-300 rounded bg-transparent hover:text-yellow-600"
                   >
                     Plan Your Trip
                   </button>
                 </li>
                 <li>
                   <button onClick={() => {navigate('/MapPage'); toggleMenu();}}
-                    className="block py-2 px-3 text-black rounded bg-transparent hover:text-yellow-600"
+                    className="block py-2 px-3 text-stone-300 rounded bg-transparent hover:text-yellow-600"
                   >
                     Adventure Map
                   </button>
                 </li>
                 <li>
                   <button onClick={() => {navigate('/AboutUs'); toggleMenu();}}
-                    className="block py-2 px-3 text-black rounded bg-transparent hover:text-yellow-600"
+                    className="block py-2 px-3 text-stone-300 rounded bg-transparent hover:text-yellow-600"
                   >
                     About Us
                   </button>

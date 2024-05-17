@@ -1,6 +1,7 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import MarkerClusterGroup from "react-leaflet-cluster";
+import "../css/Map.css"; // Import your CSS file
 
 export default function Map() {
   const markers = [
@@ -46,22 +47,23 @@ export default function Map() {
     },
   ];
 
+  
   return (
-    <div id="map" class="mx-auto w-full h-screen">
-    <MapContainer center={[-7.796111, 110.366389]} zoom={10}>
-      <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
-      />
+    <div id="map-container"> {/* Assign an ID to the parent container */}
+      <MapContainer center={[-7.796111, 110.366389]} zoom={10} className="map">
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
 
-      <MarkerClusterGroup>
-        {markers.map((marker, index) => (
-          <Marker key={index} position={marker.geocode}>
-            <Popup>{marker.popUp}</Popup>
-          </Marker>
-        ))}
-      </MarkerClusterGroup>
-    </MapContainer>
+        <MarkerClusterGroup>
+          {markers.map((marker, index) => (
+            <Marker key={index} position={marker.geocode}>
+              <Popup>{marker.popUp}</Popup>
+            </Marker>
+          ))}
+        </MarkerClusterGroup>
+      </MapContainer>
     </div>
   );
 }

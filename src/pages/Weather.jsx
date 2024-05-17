@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
+import NavigateBack from "../components/NavigateBack";
 
 export default function weather() {
   const [forecastData, setForecastData] = useState(null);
@@ -25,7 +26,7 @@ export default function weather() {
   return (
     <div className="h-screen" >
        {forecastData && (
-        <div className=' text-center items-center mt-5 absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 -mt-10 sm:mt-0'>
+        <div className=' text-center items-center mt-5 absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 '>
           <h2 className='text-3xl md:text-5xl mb-10 text-stone-300'>{forecastData.city.name}</h2>
           <div key={forecastData.list[0].dt}>
             <p className='text-2xl md:text-6xl mb-10 text-stone-300 font-bold'>{forecastData.list[0].main.temp} °C</p>
@@ -36,7 +37,7 @@ export default function weather() {
       )}
       {/* Weather Forecast */}
       {forecastData ? (
-        <div className='flex sm:justify-center text-center overflow-x-auto whitespace-nowrap bg-slate-50 bg-opacity-50 backdrop-filter backdrop-blur-lg w-2/3 md:w-2/3 mx-auto rounded md:pl-20 pr-10 absolute top-2/3 sm:bottom-8 left-1/2 -translate-x-1/2'>
+        <div className='flex sm:justify-center text-center overflow-x-auto whitespace-nowrap bg-slate-50 bg-opacity-50 w-2/3 md:w-2/3 mx-auto rounded md:pl-20 pr-10 absolute top-2/3 sm:bottom-8 left-1/2 -translate-x-1/2'>
           {forecastData.list
             .filter((forecast, index) => index < 7)
             .map((forecast, index) => (
@@ -46,7 +47,7 @@ export default function weather() {
                   src={`http://openweathermap.org/img/wn/${forecast.weather[0].icon}.png`}
                   alt="Weather Icon"
                   className='mx-auto'
-                />
+                  />
                 <p>{forecast.main.temp} °C</p>
                 <p>{forecast.weather[0].description}</p>
               </div>
@@ -55,7 +56,9 @@ export default function weather() {
       ) : (
         <p>Loading Weather Forecast...</p>
       )} 
-      <br/>
+      <div className="absolute inset-x-0 bottom-0 text-center">
+      <NavigateBack/>
+      </div>
     </div>
   );
 }

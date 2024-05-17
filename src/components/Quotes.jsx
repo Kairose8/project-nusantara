@@ -17,7 +17,7 @@ export default function Quotes() {
     return (
         <>
             {quotes.length > 0 && randomIndex !== null && (
-                    <p className=''>{quotes[randomIndex].text}</p>
+                    <p className='text-stone-200 mt-8'>{quotes[randomIndex].text}</p>
             )}
         </>
     );

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 export default function Currency() {
   const [currencies, setCurrencies] = useState({});
@@ -8,10 +9,9 @@ export default function Currency() {
   const [result, setResult] = useState(0);
 
   useEffect(() => {
-    fetch(
-      `https://api.currencyapi.com/v3/latest?api_key=cur_live_GiAMYcX0i27qZA6iLcpmAE6mW7GnU5u2V9zC9TfV`
-    )
-      .then((response) => response.json())
+    axios
+      .get(`https://api.currencyapi.com/v3/latest?api_key=cur_live_GiAMYcX0i27qZA6iLcpmAE6mW7GnU5u2V9zC9TfV`)
+      .then((response) => response.data)
       .then((data) => setCurrencies(data.data));
   }, []);
 

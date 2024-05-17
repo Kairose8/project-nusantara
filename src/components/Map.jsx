@@ -47,6 +47,7 @@ export default function Map() {
   ];
 
   return (
+    <div id="map" class="mx-auto w-full h-screen">
     <MapContainer center={[-7.796111, 110.366389]} zoom={10}>
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -61,5 +62,6 @@ export default function Map() {
         ))}
       </MarkerClusterGroup>
     </MapContainer>
+    </div>
   );
 }

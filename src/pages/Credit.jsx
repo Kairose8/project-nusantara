@@ -85,7 +85,7 @@ export default function AboutUs() {
             <br />
             <br />
           </div>
-          <div class="px-6 py-4 ">
+          <div class="px-6 py-4 mt-2 -mb-1">
             <span class="inline-block px-2 py-1 font-semibold text-zinc-50 bg-yellow-700 rounded-full">
               Design
             </span>
@@ -146,7 +146,7 @@ export default function AboutUs() {
             <br />
             <br />
           </div>
-          <div class="px-6 py-4 ">
+          <div class="px-6 py-4 mt-2 -mb-1">
             <span class="inline-block px-2 py-1 font-semibold text-zinc-50 bg-amber-800 rounded-full">
               Banner
             </span>

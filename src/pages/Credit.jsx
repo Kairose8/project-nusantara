@@ -11,9 +11,9 @@ export default function AboutUs() {
         Hihiheha
         <br />
       </h1>
-        <h1 class="text-5xl mt-2 mb-10 text-center text-myColor-200 font-serif">
-          Meet Our Team!
-        </h1>
+      <h1 class="text-5xl mt-2 mb-10 text-center text-myColor-200 font-serif">
+        Meet Our Team!
+      </h1>
 
       <div class="flex justify-around flex-wrap px-14">
         <div class="w-52 mx-auto overflow-hidden bg-white rounded-lg shadow-lg hover:shadow-myColor-500 mb-5">
@@ -54,7 +54,7 @@ export default function AboutUs() {
             <div class="text-xl font-semibold text-gray-800">
               Benediktus Denzel Galgani Lumenon
             </div>
-            <p class="text-gray-600">00000104984</p>
+            <p class="text-gray-600">00000106218</p>
           </div>
           <div class="px-6 py-4 pb-3">
             <span class="inline-block px-2 py-1 font-semibold text-zinc-50 bg-yellow-500 rounded-full ">
@@ -81,7 +81,7 @@ export default function AboutUs() {
           </div>
           <div class="px-6 py-4">
             <div class="text-xl font-semibold text-gray-800">Descellia Ng</div>
-            <p class="text-gray-600">00000104984</p>
+            <p class="text-gray-600">00000108296</p>
             <br />
             <br />
           </div>
@@ -112,7 +112,7 @@ export default function AboutUs() {
             <div class="text-xl font-semibold text-gray-800">
               Theresia Glory Emmanuella
             </div>
-            <p class="text-gray-600">00000104984</p>
+            <p class="text-gray-600">00000100723</p>
             <br />
           </div>
           <div class="px-6 py-4 ">
@@ -142,7 +142,7 @@ export default function AboutUs() {
             <div class="text-xl font-semibold text-gray-800">
               Sharon Tionardi
             </div>
-            <p class="text-gray-600">00000104984</p>
+            <p class="text-gray-600">00000095084</p>
             <br />
             <br />
           </div>

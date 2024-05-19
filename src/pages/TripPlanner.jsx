@@ -2,7 +2,7 @@ import ToolsCard from "../components/ToolsCard";
 
 export default function TripPlanner() {
   return (
-    <div className="h-full md:h-screen">
+    <div className="h-screen">
       {/* isi */}
       <div>
         {/* page text  */}

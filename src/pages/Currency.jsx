@@ -8,54 +8,50 @@ export default function CurrencyConverter() {
   const [usdToIdrRate, setUsdToIdrRate] = useState(0);
 
   useEffect(() => {
-    const fetchConversionRate = async () => {
+    const fetchConversionRates = async () => {
       try {
         const response = await axios.get(
-          "https://api.currencyapi.com/v3/rates/convert?from=USD&to=IDR&apikey=cur_live_GiAMYcX0i27qZA6iLcpmAE6mW7GnU5u2V9zC9TfV"
+          "https://api.currencyapi.com/v3/rates/convert?from=USD&to=IDR,EUR,GBP,JPY,CNY&apikey=cur_live_GiAMYcX0i27qZA6iLcpmAE6mW7GnU5u2V9zC9TfV"
         );
-        const conversionRate = response.data.result;
-        setUsdToIdrRate(conversionRate);
+        const rates = response.data.result;
+        setUsdToIdrRate(rates.IDR);
+        setEurToIdrRate(rates.EUR);
+        setGbpToIdrRate(rates.GBP);
+        setJpyToIdrRate(rates.JPY);
+        setCnyToIdrRate(rates.CNY);
       } catch (error) {
-        console.error("Error fetching conversion rate:", error);
+        console.error("Error fetching conversion rates:", error);
       }
+      console.log(response.data);
     };
 
-    fetchConversionRate();
+    fetchConversionRates();
   }, []);
 
-  const handleAmountChange = (e) => {
-    setAmount(e.target.value);
-  };
-
-  const handleConvert = () => {
-    const convertedAmount = amount * usdToIdrRate;
-    setResult(convertedAmount);
-  };
+  const [eurToIdrRate, setEurToIdrRate] = useState(0);
+  const [gbpToIdrRate, setGbpToIdrRate] = useState(0);
+  const [jpyToIdrRate, setJpyToIdrRate] = useState(0);
+  const [cnyToIdrRate, setCnyToIdrRate] = useState(0);
 
   return (
     <div className="h-screen container mx-auto p-4">
-      <h1 className="text-3xl font-bold text-center mb-4">
-        USD to IDR Converter
-      </h1>
-      <div className="flex items-center justify-center mb-4">
-        <input
-          type="number"
-          value={amount}
-          onChange={handleAmountChange}
-          className="appearance-none block w-40 bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
-        />
-        <button
-          className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-3 px-4 rounded ml-4"
-          onClick={handleConvert}
-        >
-          Convert
-        </button>
+      <div className="bg-myColor-500 p-12 rounded-lg">
+        <h1 className="text-3xl font-bold text-center mb-4">
+          Today's Exchange Rates
+        </h1>
+        <div className="flex items-center justify-center mb-4">
+          <div className="text-center">
+            <br/>
+            <br/>
+            <p className="text-lg text-stone-300">1 USD = {usdToIdrRate} IDR</p>
+            <p className="text-lg text-stone-300">1 EUR = {eurToIdrRate} IDR</p>
+            <p className="text-lg text-stone-300">1 GBP = {gbpToIdrRate} IDR</p>
+            <p className="text-lg text-stone-300">1 JPY = {jpyToIdrRate} IDR</p>
+            <p className="text-lg text-stone-300">1 CNY = {cnyToIdrRate} IDR</p>
+          </div>
+        </div>
       </div>
-      <div className="text-center">
-        <p className="text-lg font-bold mb-2">
-          {amount} USD = {result} IDR
-        </p>
-        <p className="text-lg">1 USD = {usdToIdrRate} IDR</p>
+      <div className="flex flex-col">
         <NavigateBack />
       </div>
     </div>

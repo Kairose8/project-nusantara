@@ -97,7 +97,10 @@ export default function Navbar() {
 
         {/* navbar sm */}
         {isOpen && (
-          <div className="fixed top-0 left-0 z-50 w-full h-full bg-black bg-opacity-50 flex justify-center items-center">
+          <div
+            className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center"
+            style={{ zIndex: 1200 }}
+          >
             <div className="bg-myColor-600 rounded-lg p-8">
               <ul className="flex flex-col items-center font-medium space-y-4">
                 <li>

@@ -42,9 +42,9 @@ export default function CurrencyConverter() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center text-center justify-center">
+    <div>
       {/* header */}
-      <div className="flex flex-col -mt-40 items-center text-center mb-8">
+      <div className="flex flex-col mt-10 items-center text-center">
         <div className="w-4/5 text-4xl md:text-5xl items-center font-bold text-white">
           <p>Be a Millionaire!</p>
         </div>
@@ -55,41 +55,43 @@ export default function CurrencyConverter() {
       </div>
 
       {/* tool */}
-      <div className="h-56 bg-myColor-500 p-8 rounded-lg shadow-md w-5/6">
-        <h1 className="text-3xl font-bold text-center mb-4">
-          Today's Exchange Rates
-        </h1>
-        <div className="flex items-center justify-center mb-4">
-          <select
-            value={selectedCurrency}
-            onChange={handleCurrencyChange}
-            className="mr-2 p-2 border border-gray-400 rounded-md focus:outline-none"
-          >
-            <option value="USD">USD</option>
-            <option value="EUR">EUR</option>
-            <option value="GBP">GBP</option>
-            <option value="JPY">JPY</option>
-            <option value="CNY">CNY</option>
-            <option value="AUD">AUD</option>
-            <option value="CAD">CAD</option>
-            <option value="CHF">CHF</option>
-            <option value="HKD">HKD</option>
-            <option value="SGD">SGD</option>
-          </select>
-          <input
-            type="number"
-            value={amount}
-            onChange={handleAmountChange}
-            className="p-2 border border-gray-400 rounded-md focus:outline-none"
-            placeholder="Enter amount"
-          />
+      <div className="min-h-screen flex flex-col mt-20 items-center text-center">
+        <div className="h-56 bg-myColor-500 p-8 rounded-lg shadow-md w-5/6">
+          <h1 className="text-3xl font-bold text-center mb-4">
+            Today's Exchange Rates
+          </h1>
+          <div className="flex items-center justify-center mb-4">
+            <select
+              value={selectedCurrency}
+              onChange={handleCurrencyChange}
+              className="mr-2 p-2 border border-gray-400 rounded-md focus:outline-none"
+            >
+              <option value="USD">USD</option>
+              <option value="EUR">EUR</option>
+              <option value="GBP">GBP</option>
+              <option value="JPY">JPY</option>
+              <option value="CNY">CNY</option>
+              <option value="AUD">AUD</option>
+              <option value="CAD">CAD</option>
+              <option value="CHF">CHF</option>
+              <option value="HKD">HKD</option>
+              <option value="SGD">SGD</option>
+            </select>
+            <input
+              type="number"
+              value={amount}
+              onChange={handleAmountChange}
+              className="p-2 border border-gray-400 rounded-md focus:outline-none"
+              placeholder="Enter amount"
+            />
+          </div>
+          <p className="text-lg text-center mb-4">
+            {formatIDRAmount(amount)} {selectedCurrency} ={" "}
+            {formatIDRAmount(idrEquivalent)} IDR
+          </p>
         </div>
-        <p className="text-lg text-center mb-4">
-          {formatIDRAmount(amount)} {selectedCurrency} ={" "}
-          {formatIDRAmount(idrEquivalent)} IDR
-        </p>
+        <NavigateBack />
       </div>
-      <NavigateBack />
     </div>
   );
 }

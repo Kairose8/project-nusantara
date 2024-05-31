@@ -8,7 +8,7 @@ export default function Language() {
         {/* isi */}
         <div>
           {/* page text  */}
-          <div className="flex flex-col items-center text-center mb-8">
+          <div className="flex flex-col items-center text-center mt-10 mb-8">
             <div className="w-4/5 text-4xl md:text-5xl items-center  font-bold text-white">
               <p>Be a Native!</p>
             </div>

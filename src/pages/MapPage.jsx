@@ -4,7 +4,7 @@ import DynamicNavigationButtons from "../components/DynamicNavigationButtons";
 
 export default function MapPage() {
   return (
-    <div className="h-screen">
+    <div className="h-full xsm:h-screen">
       <p className="text-5xl mt-10 text-center font-semibold text-white font-space">
         Adventure Map
       </p>

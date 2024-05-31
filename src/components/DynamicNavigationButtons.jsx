@@ -38,7 +38,7 @@ const DynamicNavigationButtons = () => {
           </button>
         )}
       </div>
-      <div className="-mt-12 text-right">
+      <div className="-mt-14 text-right">
         {/* Render next button only if not on the AboutUs page */}
         {currentPageIndex !== pages.length - 1 && (
           <button

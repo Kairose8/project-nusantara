@@ -3,7 +3,7 @@ import DynamicNavigationButtons from "../components/DynamicNavigationButtons";
 
 export default function ExplorePage() {
   return (
-    <div className="xsm:h-screen">
+    <div className="h-screen xsm:h-screen ">
       <div className="mt-11 font-serif text-xl text-white text-center">
         <p>Only in</p>
       </div>

@@ -1,6 +1,6 @@
 #map-container {
-    width: 350px; /* Set the width to desired size */
-    height: 350px; /* Set the height to desired size */
+    width: 80%; 
+    height: 350px; 
   }
   
   .map {

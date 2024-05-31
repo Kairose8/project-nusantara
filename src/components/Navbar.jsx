@@ -1,10 +1,11 @@
 import iconAirplane from "../assets/icons/iconAirplane.png";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import React, { useState } from "react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -55,7 +56,7 @@ export default function Navbar() {
             <li>
               <button
                 onClick={() => navigate("/")}
-                className="block py-2 px-3 md:p-0 text-white rounded bg-transparent hover:text-yellow-600"
+                className={`block py-2 px-3 md:p-0 text-white rounded bg-transparent hover:text-yellow-600 ${location.pathname === '/' ? 'text-yellow-600' : ''}`}
               >
                 Home
               </button>
@@ -63,7 +64,7 @@ export default function Navbar() {
             <li>
               <button
                 onClick={() => navigate("/ExplorePage")}
-                className="block py-2 px-3 md:p-0 text-white rounded bg-transparent hover:text-yellow-600"
+                className={`block py-2 px-3 md:p-0 text-white rounded bg-transparent hover:text-yellow-600 ${location.pathname === '/ExplorePage' ? 'text-yellow-600' : ''}`}
               >
                 Go Explore
               </button>
@@ -71,7 +72,7 @@ export default function Navbar() {
             <li>
               <button
                 onClick={() => navigate("/TripPlanner")}
-                className="block py-2 px-3 md:p-0 text-white rounded bg-transparent hover:text-yellow-600"
+                className={`block py-2 px-3 md:p-0 text-white rounded bg-transparent hover:text-yellow-600 ${location.pathname === '/TripPlanner' ? 'text-yellow-600' : ''}`}
               >
                 Plan Your Trip
               </button>
@@ -79,7 +80,7 @@ export default function Navbar() {
             <li>
               <button
                 onClick={() => navigate("/MapPage")}
-                className="block py-2 px-3 md:p-0 text-white rounded bg-transparent hover:text-yellow-600"
+                className={`block py-2 px-3 md:p-0 text-white rounded bg-transparent hover:text-yellow-600 ${location.pathname === '/MapPage' ? 'text-yellow-600' : ''}`}
               >
                 Adventure Map
               </button>
@@ -87,7 +88,7 @@ export default function Navbar() {
             <li>
               <button
                 onClick={() => navigate("/AboutUs")}
-                className="block py-2 px-3 md:p-0 text-white rounded bg-transparent hover:text-yellow-600"
+                className={`block py-2 px-3 md:p-0 text-white rounded bg-transparent hover:text-yellow-600 ${location.pathname === '/AboutUs' ? 'text-yellow-600' : ''}`}
               >
                 About Us
               </button>
@@ -109,7 +110,7 @@ export default function Navbar() {
                       navigate("/");
                       toggleMenu();
                     }}
-                    className="block text py-2 px-3 text-stone-300 rounded bg-transparent hover:text-yellow-600"
+                    className={`block py-2 px-3 text-stone-300 rounded bg-transparent hover:text-yellow-600 ${location.pathname === '/' ? 'text-yellow-600' : ''}`}
                   >
                     Home
                   </button>
@@ -120,7 +121,7 @@ export default function Navbar() {
                       navigate("/ExplorePage");
                       toggleMenu();
                     }}
-                    className="block py-2 px-3 text-stone-300 rounded bg-transparent hover:text-yellow-600"
+                    className={`block py-2 px-3 text-stone-300 rounded bg-transparent hover:text-yellow-600 ${location.pathname === '/ExplorePage' ? 'text-yellow-600' : ''}`}
                   >
                     Go Explore
                   </button>
@@ -131,7 +132,7 @@ export default function Navbar() {
                       navigate("/TripPlanner");
                       toggleMenu();
                     }}
-                    className="block py-2 px-3 text-stone-300 rounded bg-transparent hover:text-yellow-600"
+                    className={`block py-2 px-3 text-stone-300 rounded bg-transparent hover:text-yellow-600 ${location.pathname === '/TripPlanner' ? 'text-yellow-600' : ''}`}
                   >
                     Plan Your Trip
                   </button>
@@ -142,7 +143,7 @@ export default function Navbar() {
                       navigate("/MapPage");
                       toggleMenu();
                     }}
-                    className="block py-2 px-3 text-stone-300 rounded bg-transparent hover:text-yellow-600"
+                    className={`block py-2 px-3 text-stone-300 rounded bg-transparent hover:text-yellow-600 ${location.pathname === '/MapPage' ? 'text-yellow-600' : ''}`}
                   >
                     Adventure Map
                   </button>
@@ -153,7 +154,7 @@ export default function Navbar() {
                       navigate("/AboutUs");
                       toggleMenu();
                     }}
-                    className="block py-2 px-3 text-stone-300 rounded bg-transparent hover:text-yellow-600"
+                    className={`block py-2 px-3 text-stone-300 rounded bg-transparent hover:text-yellow-600 ${location.pathname === '/AboutUs' ? 'text-yellow-600' : ''}`}
                   >
                     About Us
                   </button>

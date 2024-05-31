@@ -1,4 +1,6 @@
 import Map from "../components/Map";
+import DynamicNavigationButtons from "../components/DynamicNavigationButtons";
+
 
 export default function MapPage() {
   return (
@@ -15,6 +17,8 @@ export default function MapPage() {
       <p className="text-xl mt-10 text-center font-semibold text-white font-space lg:text-2xl">
         Look at Yogyakarta's go to spots!
       </p>
+      <DynamicNavigationButtons/>
+
     </div>
   );
 }

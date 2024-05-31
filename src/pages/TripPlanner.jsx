@@ -1,8 +1,10 @@
 import ToolsCard from "../components/ToolsCard";
+import DynamicNavigationButtons from "../components/DynamicNavigationButtons";
+
 
 export default function TripPlanner() {
   return (
-    <div className="xsm:h-screen">
+    <div className="h-full">
       {/* isi */}
       <div>
         {/* page text  */}
@@ -19,6 +21,7 @@ export default function TripPlanner() {
         <div className="flex flex-col items-center">
           <ToolsCard />
         </div>
+        <DynamicNavigationButtons/>
       </div>
     </div>
   );

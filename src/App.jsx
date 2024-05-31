@@ -1,3 +1,4 @@
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar";
@@ -10,12 +11,11 @@ import Weather from "./pages/Weather";
 import Destinations from "./pages/Destinations";
 import Language from "./pages/Language";
 import Currency from "./pages/Currency";
-
-
+import DynamicNavigationButtons from "./components/DynamicNavigationButtons";
 
 export default function App() {
   return (
-    <div className="bg-gradient-to-r from-stone-500 to-stone-700  " >
+    <div className="bg-gradient-to-r from-stone-500 to-stone-700">
       <Router>
         <Navbar />
         <Routes>
@@ -27,7 +27,7 @@ export default function App() {
           <Route path="/Weather" element={<Weather />} />
           <Route path="/Language" element={<Language />} />
           <Route path="/Currency" element={<Currency />} />
-          <Route path="/Destinations/:place" element={<Destinations/>} />
+          <Route path="/Destinations/:place" element={<Destinations />} />
         </Routes>
       </Router>
     </div>

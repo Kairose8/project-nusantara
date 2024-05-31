@@ -13,7 +13,7 @@ import sari from "../assets/places/sari/tamanSari1.jpg";
 
 export default function SwiperCard() {
   return (
-    <div className=" -mt-36 md:mt-0 size-max">
+    <div className="mx-auto w-80"> {/* Added mx-auto and w-80 classes */}
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
@@ -28,7 +28,7 @@ export default function SwiperCard() {
         }}
         pagination={true}
         modules={[EffectCoverflow, Pagination]}
-        className="mySwiper -mt-20 sm:mt-48 md:mt-0 rounded-xl size-56 md:size-72 lg:96 "
+        className="mySwiper mt-10 "
       >
         <SwiperSlide>
           <img src={parangtritis} />
@@ -49,3 +49,4 @@ export default function SwiperCard() {
     </div>
   );
 }
+

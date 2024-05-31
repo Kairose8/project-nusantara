@@ -4,9 +4,11 @@ import tere from "../assets/portrait/tere.jpg";
 import bintang from "../assets/portrait/Bintang.jpg";
 import denzel from "../assets/portrait/denzel1.jpg";
 
+import DynamicNavigationButtons from "../components/DynamicNavigationButtons";
+
 export default function AboutUs() {
   return (
-    <div className="sm:h-screen">
+    <div className="h-full">
       <h1 class="text-5xl mt-10 text-center font-semibold text-myColor-500 font-serif">
         Hihiheha
         <br />
@@ -159,8 +161,10 @@ export default function AboutUs() {
               @shrron__
             </a>
           </div>
+
         </div>
       </div>
+        <DynamicNavigationButtons/>
     </div>
   );
 }

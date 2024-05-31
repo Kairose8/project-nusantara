@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <div className="h-screen flex flex-col items-center text-center ">
-        <p className="font-serif text-5xl mb-10 mt-52 text-white w-2/3 lg:w-max">
+        <p className="font-serif text-5xl mb-10 mt-28 text-white w-2/3 lg:w-max">
           The Amazing Yogyakarta
         </p>
           <p className="font-grotesk text-white text-center  md:text-sm w-2/3 lg:text-xl lg:w-3/5">

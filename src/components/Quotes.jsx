@@ -15,10 +15,11 @@ export default function Quotes() {
     }, []);
 
     return (
-        <>
+        <div className="mt-8 bg-myColor-500 border p-5 text-stone-200">
+            <p>Random Quotes:</p>
             {quotes.length > 0 && randomIndex !== null && (
-                    <p className='text-stone-200 mt-8'>{quotes[randomIndex].text}</p>
+                <p>{quotes[randomIndex].text}</p>
             )}
-        </>
+        </div>
     );
 }

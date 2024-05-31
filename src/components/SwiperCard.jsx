@@ -28,7 +28,7 @@ export default function SwiperCard() {
         }}
         pagination={true}
         modules={[EffectCoverflow, Pagination]}
-        className="mySwiper mt-10 "
+        className="mySwiper mt-10"
       >
         <SwiperSlide>
           <img src={parangtritis} />

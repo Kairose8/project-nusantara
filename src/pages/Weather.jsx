@@ -2,10 +2,9 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import NavigateBack from "../components/NavigateBack";
 
-export default function weather() {
+export default function Weather() {
   const [forecastData, setForecastData] = useState(null);
   const [city, setCity] = useState('Yogyakarta');
-
 
   useEffect(() => {
     const apiKey = '1ea38fd0717015b180411760331623ae';
@@ -20,44 +19,52 @@ export default function weather() {
 
   }, [city]);
 
-
-
-  console.log(forecastData)
   return (
-    <div className="h-screen" >
-       {forecastData && (
-        <div className=' text-center items-center mt-5 absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 '>
-          <h2 className='text-3xl md:text-5xl mb-10 text-stone-300'>{forecastData.city.name}</h2>
-          <div key={forecastData.list[0].dt}>
-            <p className='text-2xl md:text-6xl mb-10 text-stone-300 font-bold'>{forecastData.list[0].main.temp} °C</p>
-            <p className='text-xl sm:text-xl md:text-3xl text-stone-300 mb-5'>{forecastData.list[0].weather[0].description}</p>
-            <p className='text-2xl md:text-5xl mb-10 text-stone-300'>Humidity: {forecastData.list[0].main.humidity}%</p>
+    <div className="xsm:h-screen">
+      <div className="container mx-auto pt-20">
+        {/* Header */}
+        <div className="text-center mb-8">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-2">Weather Forecast</h1>
+          {forecastData && (
+            <h2 className="text-2xl md:text-4xl text-stone-300">{forecastData.city.name}</h2>
+          )}
+        </div>
+
+        {/* Current Weather */}
+        {forecastData && (
+          <div className='text-center mb-12'>
+            <h2 className='text-3xl md:text-5xl mb-2 text-stone-300'>{forecastData.list[0].main.temp} °C</h2>
+            <p className='text-xl md:text-2xl text-stone-300'>{forecastData.list[0].weather[0].description}</p>
+            <p className='text-lg md:text-xl text-stone-300'>Humidity: {forecastData.list[0].main.humidity}%</p>
+          </div>
+        )}
+
+        {/* Hourly Forecast */}
+        <div className='flex justify-center mb-10'>
+          <div className="w-full md:w-5/6 overflow-x-auto">
+            <div className='flex'>
+              {forecastData && forecastData.list
+                .filter((forecast, index) => index < 11)
+                .map((forecast, index) => (
+                  <div className='w-1/3 p-4 mx-2 bg-white bg-opacity-50 rounded-lg text-center' key={index}>
+                    <h2 className='text-lg font-bold'>{forecast.dt_txt.substring(11, 16)}</h2>
+                    <img
+                      src={`http://openweathermap.org/img/wn/${forecast.weather[0].icon}.png`}
+                      alt="Weather Icon"
+                      className='mx-auto'
+                    />
+                    <p className='text-lg'>{forecast.main.temp} °C</p>
+                    <p className='text-md'>{forecast.weather[0].description}</p>
+                  </div>
+                ))}
+            </div>
           </div>
         </div>
-      )}
-      {/* Weather Forecast */}
-      {forecastData ? (
-        <div className='flex sm:justify-center text-center overflow-x-auto whitespace-nowrap bg-slate-50 bg-opacity-50 w-2/3 md:w-2/3 mx-auto rounded md:pl-20 pr-10 absolute top-2/3 sm:bottom-8 left-1/2 -translate-x-1/2'>
-          {forecastData.list
-            .filter((forecast, index) => index < 7)
-            .map((forecast, index) => (
-              <div className='m-3 ml-10 inline-block' key={index}>
-                <h1>{forecast.dt_txt.substring(11, 16)}</h1>
-                <img
-                  src={`http://openweathermap.org/img/wn/${forecast.weather[0].icon}.png`}
-                  alt="Weather Icon"
-                  className='mx-auto'
-                  />
-                <p>{forecast.main.temp} °C</p>
-                <p>{forecast.weather[0].description}</p>
-              </div>
-            ))}
+
+        {/* NavigateBack Component */}
+        <div className="text-center mb-4">
+          <NavigateBack />
         </div>
-      ) : (
-        <p>Loading Weather Forecast...</p>
-      )} 
-      <div className="absolute inset-x-0 bottom-0 text-center">
-      <NavigateBack/>
       </div>
     </div>
   );

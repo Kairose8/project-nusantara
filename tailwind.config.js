@@ -9,6 +9,9 @@ export default {
         space: ['"Space Grotesk"', ...defaultTheme.fontFamily.sans],
         play: ['"Playfair Display"', ...defaultTheme.fontFamily.sans],
       },
+      screens: {
+          'xsm': '376px'
+      },
       colors: {
         myColor: {
           50: "#f5f3f1",

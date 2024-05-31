@@ -6,7 +6,7 @@ import denzel from "../assets/portrait/denzel1.jpg";
 
 export default function AboutUs() {
   return (
-    <div className="h-full lg:h-screen">
+    <div className="sm:h-screen">
       <h1 class="text-5xl mt-10 text-center font-semibold text-myColor-500 font-serif">
         Hihiheha
         <br />
